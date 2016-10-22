@@ -1,0 +1,44 @@
+
+<div class="container padding-inside-top-xs">
+  <div style="background-color:#FF8C00;color:white;font-family: 'Creepster', cursive;" class="col-sm-12 padding-inside-top-sm padding-inside-bottom-md text-center">
+    <h1> Paul Rho's Creeeepy Rock-Paper-Scissors! </h1>
+  </div>
+
+    <div class="row Navigation">
+        <div class="col-sm-offset-2 col-sm-8 padding-inside-top-sm padding-inside-bottom-sm">
+
+<!-- Adding a NavBar for every move to be able to indicate the active button. -->
+          <ul class="nav nav-pills nav-justified">
+            <!-- <li role="presentation" class="active"><a href="/rock">Play Rock</a></li> -->
+            <li role="presentation" class=<%=@active_rock%>> <a href="/rock">Play Rock</a></li>
+            <li role="presentation" class=<%=@active_paper%>> <a href="/paper">Play Paper</a></li>
+            <li role="presentation" class=<%=@active_scissors%>> <a href="/scissors">Player Scissors</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-offset-2 col-sm-8 padding-inside-bottom-sm">
+          <table class="table">
+            <tr class="text-center">
+              <td width=50%> <h3> You played <%= @user_move %>! </h3> </td>
+              <td width=50%> <h3> The computer played <%= @computer_move %>! </h3> </td>
+            </tr>
+            <tr class="text-center">
+              <td> <img src= <%= @user_image %> width=200px></img> </td>
+              <td> <img src= <%= @computer_image %> width=200px></img> </td>
+            </tr>
+          </table>
+        </div>
+
+          <div class="col-sm-12 padding-inside-bottom-sm padding-inside-top-sm" style="background-color:black; ">
+
+            <table width=100%>
+              <tr class="text-center">
+                <td width=33%> <img src= <%= @game_result_image %> height=150px></img></td>
+                <td width=33% style="color:white;"> <h1> <%= @game_result_text %></h1>  </td>
+                <td width=33%> <img src= <%= @game_result_image %> height=150px></img> </td>
+              </tr>
+            </table>
+
+
+          </div>
+    </div>
+</div>
